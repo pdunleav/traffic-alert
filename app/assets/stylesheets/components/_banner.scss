@@ -1,0 +1,17 @@
+.home-banner {
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.25rem;
+    opacity: .75;
+    margin: 1.5rem 0;
+  }
+}
+
+.map-bg {
+  background-image: url(asset_path('map.png'));
+  background-size: cover;
+  height: 100vh;
+  padding-top: 20vh;
+}

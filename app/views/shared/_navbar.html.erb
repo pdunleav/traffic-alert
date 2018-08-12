@@ -1,4 +1,4 @@
-<div class="navbar-freddy position-fixed-top">
+<div class="navbar-freddy fixed-top">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-freddy-brand" do %>
     <%= image_tag "logo.png", height: 50 %>
@@ -6,6 +6,9 @@
 
   <div class="navbar-freddy-navigation">
     <!-- Add links here if needed -->
+    <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <% end %>
   </div>
 </div>
 
