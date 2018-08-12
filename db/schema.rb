@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_123335) do
+ActiveRecord::Schema.define(version: 2018_08_12_140142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "journeys", force: :cascade do |t|
+    t.string "origin_address"
+    t.float "origin_latitude"
+    t.float "origin_longitude"
+    t.string "destination_address"
+    t.float "destination_latitude"
+    t.float "destination_longitude"
+    t.boolean "car"
+    t.boolean "bicycle"
+    t.boolean "public_transport"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_journeys_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,12 +42,6 @@ ActiveRecord::Schema.define(version: 2018_08_12_123335) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "home_address"
-    t.string "work_address"
-    t.float "work_latitude"
-    t.float "work_longitude"
-    t.float "home_latitude"
-    t.float "home_longitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
