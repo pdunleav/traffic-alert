@@ -1,10 +1,17 @@
-// Define variables for your color scheme
+// BRAND COLORS
 
-// For example:
-$red: #EE5F5B;
+// Light green
+$primary: #35d0ba;
+// Dark green
+$secondary: #06504A;
+// Text dark gray
+$text-color: #1A1A1A;
+
+// UTILITY COLORS
+$red: #c93d1b;
 $blue: #469AE0;
-$yellow: #FDB631;
+$yellow: #f8c43a;
 $orange: #E67E22;
-$green: #32B796;
-$gray: #000000;
-$light-gray: #F4F4F4;
+$green: $primary;
+$gray: #424242;
+$light-gray: #F7F7F7;
