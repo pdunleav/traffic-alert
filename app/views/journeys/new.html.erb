@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-6">
+      <h2>Tell <strong>Freddy</strong> about your daily commute.</h2>
+      <%= simple_form_for @journey do |f| %>
+        <%= f.input :origin_address %>
+        <%= f.input :destination_address %>
+        <%= f.input :arrival_time %>
+        <h5>How can you get there?</h5>
+        <%= f.input :car %>
+        <%= f.input :bicycle %>
+        <%= f.input :public_transport %>
+        <% unless @journey.primary %>
+          <%= f.input :duration %>
+        <% end %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
