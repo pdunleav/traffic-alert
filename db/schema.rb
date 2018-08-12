@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_141756) do
+ActiveRecord::Schema.define(version: 2018_08_12_144443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_141756) do
     t.bigint "user_id"
     t.boolean "primary"
     t.integer "duration"
+    t.time "arrival_time"
     t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
