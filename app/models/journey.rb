@@ -1,5 +1,7 @@
 class Journey < ApplicationRecord
 
+  validates :duration, presence: true, unless: Proc.new { |j| j.primary }
+
   before_save :geocode_origin_address
   before_save :geocode_destination_address
 
