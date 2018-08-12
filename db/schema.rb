@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 2018_08_12_140142) do
     t.string "destination_address"
     t.float "destination_latitude"
     t.float "destination_longitude"
-    t.boolean "car"
-    t.boolean "bicycle"
-    t.boolean "public_transport"
+    t.boolean "car", default: false, null: false
+    t.boolean "bicycle", default: false, null: false
+    t.boolean "public_transport", default: false, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_journeys_on_user_id"
   end

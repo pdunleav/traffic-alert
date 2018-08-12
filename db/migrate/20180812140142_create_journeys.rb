@@ -7,9 +7,9 @@ class CreateJourneys < ActiveRecord::Migration[5.2]
       t.string :destination_address
       t.float :destination_latitude
       t.float :destination_longitude
-      t.boolean :car
-      t.boolean :bicycle
-      t.boolean :public_transport
+      t.boolean :car, null: false, default: false
+      t.boolean :bicycle, null: false, default: false
+      t.boolean :public_transport, null: false, default: false
       t.references :user
     end
   end
