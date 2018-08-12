@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_144443) do
     t.boolean "bicycle", default: false, null: false
     t.boolean "public_transport", default: false, null: false
     t.bigint "user_id"
-    t.boolean "primary"
+    t.boolean "primary", default: false
     t.integer "duration"
     t.time "arrival_time"
     t.index ["user_id"], name: "index_journeys_on_user_id"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(version: 2018_08_12_144443) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "home_address"
+    t.string "work_address"
+    t.float "work_latitude"
+    t.float "work_longitude"
+    t.float "home_latitude"
+    t.float "home_longitude"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

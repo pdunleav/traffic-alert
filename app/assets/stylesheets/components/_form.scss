@@ -4,3 +4,16 @@
   align-items: center;
   width: 100%;
 }
+
+input.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  margin-top: 2rem;
+  &:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $secondary;
+    box-shadow: none;
+  }
+}
