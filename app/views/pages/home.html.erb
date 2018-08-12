@@ -6,7 +6,8 @@
           <h1>Let <strong>Freddy</strong> tell you when to get out of bed!</h1>
           <p>Freddy is a traffic based notification system that will help you get to work on time! All you have to do is tell Freddy what point A & B are, what time you have to be in and Freddy tell you each morning at what time you have to get out of the house.</p>
           <% if user_signed_in? %>
-            <%= link_to "Go to your profile", user_path(current_user), class: "btn btn-freddy-primary btn-lg mt-4" %>
+            <%= link_to "Setup your journey", new_journey_path, class: "btn btn-freddy-primary btn-lg mt-4" %>
+            <%#= link_to "Go to your profile", user_path(current_user), class: "btn btn-freddy-primary btn-lg mt-4" %>
           <% else %>
             <%= link_to "Give it a try?", new_user_session_path, class: "btn btn-freddy-primary btn-lg mt-4"  %>
           <% end %>
